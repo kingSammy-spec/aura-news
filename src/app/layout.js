@@ -1,11 +1,13 @@
 import Script from 'next/script';
-import type { Metadata } from 'next';
 
 export const metadata = {
   title: 'Aura News | Premium Tech & AI Insights',
   description: 'The minimalist tech news aggregator for the future. Stay updated on the latest AI breakthroughs, Web Design trends, and Crypto movements with Aura News.',
   keywords: ['tech news', 'AI news', 'artificial intelligence', 'crypto news', 'web design', 'technology', 'aura news'],
   authors: [{ name: 'Aura News' }],
+  verification: {
+    google: 'google27fcd6f303a9589c'
+  },
   robots: {
     index: true,
     follow: true,
