@@ -1,0 +1,107 @@
+:root {
+  --bg-color: #050505;
+  --text-color: #ffffff;
+  --accent-color: #00f2ff;
+  --card-bg: #111111;
+  --secondary-text: #888888;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+header { padding: 2rem 0; border-bottom: 1px solid #222; }
+.brand { font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; }
+.nav-links a { margin-left: 2rem; text-decoration: none; color: var(--secondary-text); font-weight: 600; font-size: 0.9rem; }
+.nav-links a:hover { color: var(--accent-color); }
+
+.hero { padding: 8rem 0; text-align: center; }
+.hero h1 { font-size: 5rem; line-height: 1; margin-bottom: 2rem; font-weight: 900; }
+
+.news-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+  gap: 3rem; 
+  margin: 4rem 0; 
+}
+
+.news-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #222;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news-card:hover { transform: translateY(-10px); border-color: var(--accent-color); box-shadow: 0 20px 40px rgba(0,242,255,0.1); }
+
+.tag { color: var(--accent-color); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+h3 { margin: 1rem 0; font-size: 1.5rem; }
+p { color: var(--secondary-text); font-size: 1rem; }
+
+.ad-inline-bar {
+  grid-column: 1 / -1;
+  background: linear-gradient(90deg, #111, #0a0a0a);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px dashed #333;
+  text-align: center;
+}
+
+.ad-label { font-size: 0.6rem; color: #444; letter-spacing: 2px; margin-bottom: 1rem; display: block; }
+.ad-content { font-size: 1.2rem; font-weight: 700; color: #fff; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 2rem; margin: 4rem 0; }
+.pagination button { background: #222; border: none; color: #fff; padding: 0.8rem 2rem; border-radius: 50px; cursor: pointer; }
+.pagination button:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.premium-footer { border-top: 1px solid #222; padding: 6rem 0 2rem; background: #000; margin-top: 8rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+.footer-brand { font-size: 2.5rem; font-weight: 900; color: var(--accent-color); }
+.footer-column h4 { margin-bottom: 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+.footer-column a { display: block; color: var(--secondary-text); text-decoration: none; margin-bottom: 0.8rem; font-size: 0.9rem; }
+.footer-bottom { border-top: 1px solid #111; padding-top: 2rem; text-align: center; color: #444; font-size: 0.8rem; }
+.footer-bottom a { margin: 0 1rem; color: #666; }
+
+.burger-btn { display: block; background: none; border: none; font-size: 2rem; cursor: pointer; color: var(--text-color); }
+header nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--card-bg); flex-direction: column; padding: 2rem; z-index: 100; border-bottom: 1px solid #222; gap: 1rem !important; }
+header nav.open { display: flex; }
+.nav-links a { margin-left: 0; margin-right: 0; font-size: 1.2rem; }
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+  .container { padding: 0 1.5rem; }
+  header .container { flex-direction: column; align-items: flex-start !important; gap: 1.5rem; }
+  .hero { padding: 4rem 0; }
+  .hero h1 { font-size: 3rem; }
+  .news-grid { grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0; }
+  .ad-inline-bar { padding: 2rem 1rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .modal-content { padding: 1.5rem !important; }
+  .modal-content h2 { font-size: 1.8rem !important; }
+  .modal-content img { height: 250px !important; }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero h1 { font-size: 4rem; }
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* TV / Ultra-Wide */
+@media (min-width: 1600px) {
+  .container { max-width: 1600px; }
+  .hero h1 { font-size: 6rem; }
+  .news-grid { grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 4rem; }
+  body { font-size: 1.2rem; }
+}
