@@ -5,8 +5,8 @@ export const metadata = {
   description: 'The minimalist tech news aggregator for the future. Stay updated on the latest AI breakthroughs, Web Design trends, and Crypto movements with Aura News.',
   keywords: ['tech news', 'AI news', 'artificial intelligence', 'crypto news', 'web design', 'technology', 'aura news'],
   authors: [{ name: 'Aura News' }],
-  verification: {
-    google: 'google27fcd6f303a9589c'
+  other: {
+    'google-site-verification': 'google27fcd6f303a9589c'
   },
   robots: {
     index: true,
