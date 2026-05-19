@@ -6,7 +6,7 @@ export const metadata = {
   keywords: ['tech news', 'AI news', 'artificial intelligence', 'crypto news', 'web design', 'technology', 'aura news'],
   authors: [{ name: 'Aura News' }],
   other: {
-    'google-site-verification': 'google27fcd6f303a9589c'
+    'google-adsense-account': 'ca-pub-7322019754286753'
   },
   robots: {
     index: true,
