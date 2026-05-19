@@ -1,5 +1,6 @@
-export const metadata = {
 import Script from 'next/script';
+
+export const metadata = {
   title: 'Aura News | Premium Tech & AI Insights',
   description: 'The minimalist tech news aggregator for the future. Stay updated on the latest AI breakthroughs, Web Design trends, and Crypto movements with Aura News.',
   keywords: ['tech news', 'AI news', 'artificial intelligence', 'crypto news', 'web design', 'technology', 'aura news'],
@@ -31,12 +32,14 @@ import Script from 'next/script';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7322019754286753"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
+      <body>
+        {children}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7322019754286753"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
