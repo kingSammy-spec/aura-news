@@ -33,8 +33,26 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "Aura News",
+    "description": "The minimalist tech news aggregator for the future. Stay updated on the latest AI breakthroughs, Web Design trends, and Crypto movements.",
+    "url": "https://aura-news.vercel.app",
+    "sameAs": [
+      "https://aura-news.vercel.app"
+    ]
+  };
+
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body>
         {children}
         <Script
